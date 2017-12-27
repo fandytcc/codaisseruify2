@@ -1,0 +1,16 @@
+<div class="row">
+  <p> <%= link_to "+ CREATE NEW ARTIST", new_artist_path, class: "btn btn-info" %> </p>
+  <% @artists.each do |artist| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <% artist.photos.each do |photo| %>
+          <%= image_tag photo.image.thumbnail %>
+        <% end %>
+        <div class="caption">
+          <h3><%= link_to artist.first_name, artist %></h3>
+          <h4><%= link_to artist.last_name, artist %> </h4>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,38 @@
+<div class="row">
+<!-- artist's photo -->
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <% @artist.photos.each do |photo| %>
+        <%= image_tag photo.image.thumbnail %>
+      <% end %>
+    </div>
+  </div>
+
+<!-- Artist's main info -->
+  <div class="col-md-6 col-md-4">
+    <div class="caption">
+      <h3><label for="first_name"> First Name: <%= @artist.first_name %></h3>
+      <h4><label for="last_name"> Last Name: <%= @artist.last_name %></h4>
+      <p><label for="bio"> Bio: </label> <%= @artist.bio %></p>
+
+<!-- List of songs -->
+      <h3>List of Songs</h3>
+      <% if @artist.songs.any? %>
+        <ul>
+          <% @artist.songs.each do |song| %>
+            <li><%= song.title %>
+            <%= link_to "[Delete]", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>There are no songs for this artist.</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+  <hr/>
+
+<p><%= link_to "+ ADD NEW SONG", new_song_path, class: "btn btn-info" %>
+<%= link_to "EDIT ARTIST", edit_artist_path(@artist.id), class: "btn btn-warning"%>
+<%= link_to "DELETE ARTIST", artist_path(@artist.id), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></p>
+<%= link_to "BACK", artists_path, class: "btn btn-default"%></p>

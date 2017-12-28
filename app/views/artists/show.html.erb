@@ -14,19 +14,32 @@
       <h3><label for="first_name"> First Name: <%= @artist.first_name %></h3>
       <h4><label for="last_name"> Last Name: <%= @artist.last_name %></h4>
       <p><label for="bio"> Bio: </label> <%= @artist.bio %></p>
+    </div>
+  </div>
+</div>
 
+<div class="row">
 <!-- List of songs -->
-      <h3>List of Songs</h3>
-      <% if @artist.songs.any? %>
-        <ul>
-          <% @artist.songs.each do |song| %>
-            <li><%= song.title %>
-            <%= link_to "[Delete]", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>There are no songs for this artist.</p>
-      <% end %>
+  <div class="col-md-10 col-md-2">
+    <h3 class="page-header">List of Songs</h3>
+    <% if notice.present? %>
+    <div class="alert alert-info" role="alert">
+      <%= notice %>
+    </div>
+    <% end %>
+
+    <%= render partial: "/songs/form", locals: { song: @song } %>
+    <hr/>
+
+    <% if @artist.songs.any? %>
+    <table class="table table-striped" id="songList">
+      <%= render @artist.songs.order_by_title %>
+    </table>
+    <% else %>
+      <p>There are no songs for this artist.</p>
+    <% end %>
+    <div class="footer">
+      <a href="#" id="delete">[DELETE]</a>
     </div>
   </div>
 </div>

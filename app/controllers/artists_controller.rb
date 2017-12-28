@@ -2,10 +2,11 @@ class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
   def index
-    @artists = Artist.all
+    @artists = Artist.all.order_by_first_name
   end
 
   def show
+    @song = Song.new
     @photos = @artist.photos
   end
 

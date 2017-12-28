@@ -13,10 +13,15 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    if @song.save
-      redirect_to root_path, notice: "Song is successfully created"
-    else
-      render "new"
+
+    respond_to do |format|
+      if @song.save
+        format.html { redirect_to artists_path, notice: "Song is successfully created" }
+        format.json { render :show, status: :created, location: @song }
+      else
+        format.html { redirect_to artists_path }
+        format.json { render json: @song.errors, status: unprocessable_entity }
+      end
     end
   end
 

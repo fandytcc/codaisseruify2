@@ -1,6 +1,6 @@
 <% if @song != nil %>
   <% @song.errors.full_messages.each do |msg| %>
-    <p class="alert alert-danger"><%= msg %></p>
+    <span class="help-block"><%= msg %></span>
   <% end %>
 <% end %>
 

@@ -6,8 +6,12 @@ class Artist < ApplicationRecord
   validates :last_name, presence: true
   validates :bio, allow_blank: true, length: { maximum: 500 }
 
-  def self.order_by_name
+  def self.order_by_first_name
     order :first_name
+  end
+
+  def first_name_with_last_name
+    "#{first_name}, #{last_name}"
   end
 
 end

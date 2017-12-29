@@ -7,6 +7,7 @@ class ArtistsController < ApplicationController
 
   def show
     @song = Song.new
+    # @songs = @artist.songs
     @photos = @artist.photos
   end
 

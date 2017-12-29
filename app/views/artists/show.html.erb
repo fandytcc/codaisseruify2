@@ -22,11 +22,6 @@
 <!-- List of songs -->
   <div class="col-md-10 col-md-2">
     <h3 class="page-header">List of Songs</h3>
-    <% if notice.present? %>
-    <div class="alert alert-info" role="alert">
-      <%= notice %>
-    </div>
-    <% end %>
 
     <%= render partial: "/songs/form", locals: { song: @song } %>
     <hr/>
@@ -45,7 +40,6 @@
 </div>
   <hr/>
 
-<p><%= link_to "+ ADD NEW SONG", new_song_path, class: "btn btn-info" %>
 <%= link_to "EDIT ARTIST", edit_artist_path(@artist.id), class: "btn btn-warning"%>
 <%= link_to "DELETE ARTIST", artist_path(@artist.id), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></p>
 <%= link_to "BACK", artists_path, class: "btn btn-default"%></p>

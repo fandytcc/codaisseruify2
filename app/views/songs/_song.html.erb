@@ -1,8 +1,4 @@
-<tr class="song" data-id="<%= song.id %>">
-  <td>
-    <input name="song[<%= song.id %>]" id="song-<%= song.id %>" type="checkbox" value="1">
-  </td>
-  <td>
-    <label for="song-<%= song.id %>"><%= song.title %></label>
-  </td>
-</tr>
+<li class="song" data-id="<%= song.id %>">
+  <input name="song[<%= song.id %>]" id="song-<%= song.id %>" type="checkbox" value="1">
+  <label for="song-<%= song.id %>"><%= song.title %></label>
+</li>

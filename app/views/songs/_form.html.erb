@@ -1,11 +1,11 @@
-<%= form_for @song do |f| %>
+<%= form_for(@song) do |f| %>
   <%= render 'shared/validation_errors' %>
 
-  <div class="form-group" id="formgroup-title">
-    <%= f.text_field :title, placeholder: "Add a song", class: "form-control" %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Add a song"%>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <h4> <%= f.label :artist_id %>
     <%= f.collection_select(:artist_id, Artist.order_by_first_name, :id, :first_name_with_last_name, { :prompt => "Select an artist" }) %> </h4>
   </div>

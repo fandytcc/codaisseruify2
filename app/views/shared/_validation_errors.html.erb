@@ -1,4 +1,4 @@
-<% if @song != nil %>
+<% if @song.errors.any? %>
   <% @song.errors.full_messages.each do |msg| %>
     <span class="help-block"><%= msg %></span>
   <% end %>

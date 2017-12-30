@@ -63,8 +63,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use jQuery for easier javascript
-gem 'jquery-rails', '~> 4.3.1'
-gem 'turbolinks', '~> 2.5.3'
+gem 'jquery-rails'
+gem 'turbolinks'
 
 # Use Devise for authentication
 gem 'devise', '~> 4.2'

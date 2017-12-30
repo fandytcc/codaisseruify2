@@ -40,10 +40,12 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_bot_rails'
+  gem 'capybara'
+  gem "chromedriver-helper"
 end
 
 group :test do
-  gem 'capybara', '~> 2.9', '>= 2.9.1'
+  gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 3.1'
 end
 

@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20171230073354) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "artist_id"
-    t.boolean "selected"
+    t.boolean "selected", default: false
     t.index ["artist_id"], name: "index_songs_on_artist_id"
   end
 

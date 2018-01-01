@@ -65,7 +65,7 @@ function createSong(title){
   .fail(function(error) {
     console.log(error);
 
-    error_message = error.responseJSON.title["0"];
+    error_message = error.responseText;
     showError(error_message);
   });
 }
@@ -84,14 +84,14 @@ function resetErrors(){
   $("#error_message").remove();
   $("#formgroup-title").removeClass('has-error');
 }
-// 
-// function submitSong(event){
-//   event.preventDefault();
-//   resetErrors();
-//   var title = $("#song_title").val();
-//   createSong(title);
-//   $("#song_title").val(null);
-// }
+
+function submitSong(event){
+  event.preventDefault();
+  resetErrors();
+  var title = $("#song_title").val();
+  createSong(title);
+  $("#song_title").val(null);
+}
 
 function removeSong(event){
   event.preventDefault();

@@ -12,7 +12,7 @@ This app, which is deployed with Heroku, is built to learn how to use PostgreSQL
 2. Design model & database structure and define relationships between models
 3. Create initial seed data
 4. Create controllers & views for artists overview and show pages
-5. Style the app with Bootstrap 
+5. Style the app with [Bootstrap](https://getbootstrap.com/)
 6. Write model tests using Rspec, FactoryGirl & Faker
 7. Deploy the app via [Heroku](https://morning-refuge-58005.herokuapp.com/)
 8. Add AJAX allowing visitors to add, remove and delete songs in the show page
@@ -59,4 +59,5 @@ For more information about using PostgreSQL, Rspec, CarrierWave, Cloudinary and 
 * [CarrierWave](https://rubygems.org/gems/carrierwave/versions/0.11.2)
 * [Cloudinary](https://cloudinary.com/)
 * [Rspec](http://rspec.info/)
+* [Bootstrap](https://getbootstrap.com/)
 * [Heroku](https://www.heroku.com/)

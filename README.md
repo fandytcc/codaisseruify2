@@ -12,13 +12,13 @@ This app, which is deployed with Heroku, is built to learn how to use PostgreSQL
 2. Design model & database structure and define relationships between models
 3. Create initial seed data
 4. Create controllers & views for artists overview and show pages
-6. Style the app with Bootstrap 
-5. Write model tests using Rspec, FactoryGirl & Faker
-6. Deploy the app via Heroku (https://morning-refuge-58005.herokuapp.com/)
-6. Add AJAX allowing visitors to add, remove and delete songs in the show page
-7. Write integration tests for AJAX-related functionalities
+5. Style the app with Bootstrap 
+6. Write model tests using Rspec, FactoryGirl & Faker
+7. Deploy the app via Heroku (https://morning-refuge-58005.herokuapp.com/)
+8. Add AJAX allowing visitors to add, remove and delete songs in the show page
+9. Write integration tests for AJAX-related functionalities
 
-Note: My commits for step 1-5 are pushed to another repo (https://github.com/fandytcc/codaisseurify) 
+Note: My commits for step 1-7 are pushed to another repo (https://github.com/fandytcc/codaisseurify) 
 
 ## Model/ Database Structure
 | Artist    | Type   | Description   |

@@ -4,8 +4,8 @@ A rails app manages a collection of songs and their associated artists.
 
 This app, which is deployed with Heroku, is built to learn how to use PostgreSQL database and AJAX, write model and integration tests using [Rspec] (https://github.com/rspec/rspec), [FactoryGirl] (https://github.com/kenoir/factory_girl_rails), upload files with [CarrierWave] (https://github.com/carrierwaveuploader/carrierwave) and [Cloudiary] (https://github.com/cloudinary/cloudinary_gem)
 
-
-
+<img width="300" alt="screen shot 2018-02-14 at 13 39 04" src="https://user-images.githubusercontent.com/32798242/36206294-28125704-1192-11e8-8b98-fbeb7f365d1c.png">
+<img width="300" alt="screen shot 2018-02-14 at 13 43 39" src="https://user-images.githubusercontent.com/32798242/36206296-295c74aa-1192-11e8-8515-8b02279d7f6a.png">
 
 ## Steps
 1. Generate the App
